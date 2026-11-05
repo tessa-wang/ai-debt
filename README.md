@@ -1,8 +1,8 @@
 # The AI Money Web
 
-**An interactive, weekly-updated map of the money flowing between the companies building AI.**
+An interactive, weekly-updated map of the money flowing between the companies building AI.
 
-🔗 **Live site:** https://tessa-wang.github.io/ai-debt/
+🔗 Live site: https://tessa-wang.github.io/ai-debt/
 ---
 
 ## What this is

@@ -8,15 +8,21 @@
       "amount_usd_b": 30,
       "amount_note": null,
       "status": "closed",
-      "date_announced": "TODO",
+      "date_announced": "2026-02",
       "date_updated": "2026-10-31",
       "summary": "Nvidia took a $30B equity stake in OpenAI, replacing its earlier letter of intent to invest up to $100B.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Nvidia plans $30bn investment in upcoming OpenAI funding round",
+          "publisher": "DatacenterDynamics",
+          "url": "https://www.datacenterdynamics.com/en/news/nvidia-plans-30bn-investment-in-upcoming-openai-funding-round/",
+          "date": "2026-02"
+        },
+        {
+          "title": "OpenAI Valued at $852 Billion After Completing $122 Billion Round",
+          "publisher": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-31/openai-valued-at-852-billion-after-completing-122-billion-round",
+          "date": "2026-03-31"
         }
       ]
     },
@@ -28,15 +34,21 @@
       "amount_usd_b": 105,
       "amount_note": "up to",
       "status": "signed",
-      "date_announced": "TODO",
+      "date_announced": "2026-08-17",
       "date_updated": "2026-10-31",
       "summary": "Nvidia guarantees up to $105B of OpenAI's lease obligations on its Ohio data centers.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "OpenAI announces massive data center in Ohio with Nvidia guarantee",
+          "publisher": "Axios",
+          "url": "https://axios.com/2026/08/17/openai-nvidia-ohio-data-center-sb-energy",
+          "date": "2026-08-17"
+        },
+        {
+          "title": "Nvidia to provide up to US$105 billion guarantee for OpenAI's Ohio data centre",
+          "publisher": "South China Morning Post",
+          "url": "https://www.scmp.com/tech/big-tech/article/3364341/nvidia-provide-us105-billion-guarantee-openais-ohio-data-centre",
+          "date": "2026-08-18"
         }
       ]
     },
@@ -46,17 +58,23 @@
       "to": "openai",
       "category": "investment",
       "amount_usd_b": 50,
-      "amount_note": null,
-      "status": "closed",
-      "date_announced": "TODO",
+      "amount_note": "up to",
+      "status": "signed",
+      "date_announced": "2026-02",
       "date_updated": "2026-10-31",
-      "summary": "Amazon invested $50B in OpenAI's equity.",
+      "summary": "Amazon agreed to invest up to $50B in OpenAI: $15B up front, with the rest tied to conditions.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Amazon invests $50B in OpenAI, deepens AWS partnership",
+          "publisher": "GeekWire",
+          "url": "https://www.geekwire.com/2026/amazon-invests-50b-in-openai-deepens-aws-partnership/",
+          "date": "2026-02"
+        },
+        {
+          "title": "Amazon invests $50 billion in OpenAI",
+          "publisher": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/amazon-invests-50-billion-in-openai",
+          "date": "2026-02"
         }
       ]
     },
@@ -68,15 +86,15 @@
       "amount_usd_b": 138,
       "amount_note": null,
       "status": "signed",
-      "date_announced": "TODO",
+      "date_announced": "2025-11",
       "date_updated": "2026-10-31",
-      "summary": "OpenAI committed $138B to AWS compute, largely on Amazon's Trainium chips.",
+      "summary": "OpenAI's AWS commitment grew from $38B to $138B, including 2GW of capacity on Amazon's Trainium chips.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Amazon invests $50B in OpenAI, deepens AWS partnership with expanded $100B cloud deal",
+          "publisher": "GeekWire",
+          "url": "https://www.geekwire.com/2026/amazon-invests-50b-in-openai-deepens-aws-partnership-with-expanded-100b-cloud-deal/",
+          "date": "2026-02"
         }
       ]
     },
@@ -88,15 +106,21 @@
       "amount_usd_b": 30,
       "amount_note": null,
       "status": "closed",
-      "date_announced": "TODO",
+      "date_announced": "2026-02",
       "date_updated": "2026-10-31",
       "summary": "SoftBank put $30B into OpenAI as co-lead of its $122B funding round.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "OpenAI Valued at $852 Billion After Completing $122 Billion Round",
+          "publisher": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-31/openai-valued-at-852-billion-after-completing-122-billion-round",
+          "date": "2026-03-31"
+        },
+        {
+          "title": "OpenAI raises $122 billion at an $852 billion valuation",
+          "publisher": "The Next Web",
+          "url": "https://thenextweb.com/news/openai-122-billion-round-852-billion-valuation-retail-investors",
+          "date": "2026-03-31"
         }
       ]
     },
@@ -108,15 +132,21 @@
       "amount_usd_b": null,
       "amount_note": "undisclosed",
       "status": "closed",
-      "date_announced": "TODO",
+      "date_announced": "2025-10-28",
       "date_updated": "2026-10-31",
       "summary": "Microsoft holds about 27% of OpenAI following the company's recapitalization.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "OpenAI completes restructure, Microsoft continues to play a role",
+          "publisher": "Techzine",
+          "url": "https://www.techzine.eu/news/infrastructure/135837/openai-completes-restructure-microsoft-continues-to-play-a-role",
+          "date": "2025-10-28"
+        },
+        {
+          "title": "OpenAI completes recapitalization, Microsoft expands partnership",
+          "publisher": "Converge Digest",
+          "url": "https://convergedigest.com/openai-completes-recapitalization-microsoft-expands-partnership/",
+          "date": "2025-10-28"
         }
       ]
     },
@@ -128,15 +158,15 @@
       "amount_usd_b": 250,
       "amount_note": null,
       "status": "signed",
-      "date_announced": "TODO",
+      "date_announced": "2025-10-28",
       "date_updated": "2026-10-31",
       "summary": "OpenAI committed an additional $250B to Microsoft Azure.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "OpenAI completes recapitalization, Microsoft expands partnership",
+          "publisher": "Converge Digest",
+          "url": "https://convergedigest.com/openai-completes-recapitalization-microsoft-expands-partnership/",
+          "date": "2025-10-28"
         }
       ]
     },
@@ -148,15 +178,21 @@
       "amount_usd_b": 300,
       "amount_note": null,
       "status": "signed",
-      "date_announced": "TODO",
+      "date_announced": "2025-09-10",
       "date_updated": "2026-10-31",
       "summary": "OpenAI contracted about 4.5GW of Oracle cloud capacity worth roughly $300B over about five years.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "OpenAI signs contract to buy $300 billion worth of Oracle computing power over the next five years",
+          "publisher": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/openai-signs-contract-to-buy-usd300-billion-worth-of-oracle-computing-power-over-the-next-five-years-company-needs-4-5-gigawatts-of-power-enough-to-power-four-million-homes",
+          "date": "2025-09-10"
+        },
+        {
+          "title": "OpenAI signs $300 billion cloud contract with Oracle, according to WSJ",
+          "publisher": "The Decoder",
+          "url": "https://the-decoder.com/openai-signs-300-billion-cloud-contract-with-oracle-according-to-wsj/",
+          "date": "2025-09-10"
         }
       ]
     },
@@ -165,18 +201,24 @@
       "from": "oracle",
       "to": "nvidia",
       "category": "chips",
-      "amount_usd_b": null,
-      "amount_note": "tens of billions",
+      "amount_usd_b": 40,
+      "amount_note": "about",
       "status": "reported",
-      "date_announced": "TODO",
+      "date_announced": "2025-05-23",
       "date_updated": "2026-10-31",
-      "summary": "Oracle is spending tens of billions of dollars on Nvidia GPUs for its data centers.",
+      "summary": "Oracle is reportedly spending about $40B on Nvidia GB200 chips for OpenAI's Stargate site in Abilene, Texas.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Oracle to spend $40bn on Nvidia chips for OpenAI Texas data center",
+          "publisher": "DatacenterDynamics",
+          "url": "https://www.datacenterdynamics.com/en/news/oracle-to-spend-40bn-on-nvidia-chips-for-openai-texas-data-center/",
+          "date": "2025-05-26"
+        },
+        {
+          "title": "Oracle's $40B Nvidia hardware haul may be too hot for OpenAI's Abilene, Texas DC to handle",
+          "publisher": "The Register",
+          "url": "https://www.theregister.com/2025/05/27/oracle_openai_40b/",
+          "date": "2025-05-27"
         }
       ]
     },
@@ -188,15 +230,21 @@
       "amount_usd_b": 100,
       "amount_note": "est.",
       "status": "signed",
-      "date_announced": "TODO",
+      "date_announced": "2025-10-06",
       "date_updated": "2026-10-31",
       "summary": "OpenAI agreed to deploy 6GW of AMD MI450 GPUs, estimated at about $100B.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "OpenAI and AMD join forces",
+          "publisher": "The Register",
+          "url": "https://www.theregister.com/2025/10/06/openai_and_amd_join_forces",
+          "date": "2025-10-06"
+        },
+        {
+          "title": "OpenAI signs 6GW AMD GPU deal",
+          "publisher": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/pc-components/gpus/openai-signs-6gw-amd-gpu-deal",
+          "date": "2025-10-06"
         }
       ]
     },
@@ -208,15 +256,21 @@
       "amount_usd_b": null,
       "amount_note": "undisclosed",
       "status": "signed",
-      "date_announced": "TODO",
+      "date_announced": "2025-10-06",
       "date_updated": "2026-10-31",
       "summary": "AMD granted OpenAI a warrant for up to 160M AMD shares that vests as deployment milestones are met.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "AMD pays a high price for blockbuster OpenAI deal",
+          "publisher": "The Motley Fool",
+          "url": "https://www.fool.com/investing/2025/10/07/amd-pays-a-high-price-for-blockbuster-openai-deal",
+          "date": "2025-10-07"
+        },
+        {
+          "title": "OpenAI and AMD join forces",
+          "publisher": "The Register",
+          "url": "https://www.theregister.com/2025/10/06/openai_and_amd_join_forces",
+          "date": "2025-10-06"
         }
       ]
     },
@@ -228,15 +282,15 @@
       "amount_usd_b": null,
       "amount_note": "undisclosed",
       "status": "signed",
-      "date_announced": "TODO",
+      "date_announced": "2025-10-13",
       "date_updated": "2026-10-31",
       "summary": "OpenAI and Broadcom are co-developing 10GW of custom AI accelerators.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "OpenAI and Broadcom announce strategic collaboration to deploy 10 gigawatts of OpenAI-designed AI accelerators",
+          "publisher": "OpenAI",
+          "url": "https://openai.com/index/openai-and-broadcom-announce-strategic-collaboration/",
+          "date": "2025-10-13"
         }
       ]
     },
@@ -246,17 +300,23 @@
       "to": "coreweave",
       "category": "cloud",
       "amount_usd_b": 22.4,
-      "amount_note": "about",
+      "amount_note": "up to",
       "status": "signed",
-      "date_announced": "TODO",
+      "date_announced": "2025-03",
       "date_updated": "2026-10-31",
-      "summary": "OpenAI contracted about $22.4B of GPU capacity from CoreWeave.",
+      "summary": "Three contracts in 2025 give OpenAI up to about $22.4B of GPU capacity from CoreWeave.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "CoreWeave Expands Agreement with OpenAI by up to $6.5B",
+          "publisher": "CoreWeave",
+          "url": "https://www.coreweave.com/news/coreweave-expands-agreement-with-openai-by-up-to-6-5b",
+          "date": "2025-09-25"
+        },
+        {
+          "title": "CoreWeave deal with OpenAI now worth $22.4 billion",
+          "publisher": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/coreweave-deal-with-openai-now-worth-usd22-4-billion-another-usd6-4-billion-of-ai-data-center-capacity-added",
+          "date": "2025-09-25"
         }
       ]
     },
@@ -268,15 +328,21 @@
       "amount_usd_b": 13,
       "amount_note": null,
       "status": "closed",
-      "date_announced": "TODO",
-      "date_updated": "2026-10-31",
-      "summary": "Amazon has invested $13B in Anthropic, with up to $20B more possible.",
+      "date_announced": "2023-09",
+      "date_updated": "2026-04-20",
+      "summary": "Amazon has put $13B into Anthropic, including $5B in April 2026, with up to $20B more tied to milestones.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Amazon to invest up to $25 billion in Anthropic as part of $100 billion cloud deal",
+          "publisher": "The Star (Reuters)",
+          "url": "https://www.thestar.com.my/tech/tech-news/2026/04/21/anthropic-to-spend-over-100-billion-over-a-decade-on-amazon039s-cloud-tech",
+          "date": "2026-04-21"
+        },
+        {
+          "title": "Amazon Will Invest Up to $25 Billion More in Anthropic as AI Demand Surges",
+          "publisher": "Decrypt",
+          "url": "https://decrypt.co/365034/amazon-invest-25-billion-anthropic-ai-demand-surges",
+          "date": "2026-04-20"
         }
       ]
     },
@@ -288,15 +354,21 @@
       "amount_usd_b": 110,
       "amount_note": "at least",
       "status": "signed",
-      "date_announced": "TODO",
+      "date_announced": "2026-04-20",
       "date_updated": "2026-10-31",
       "summary": "Anthropic committed at least $110B to AWS through 2036.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Amazon to invest up to $25 billion in Anthropic as part of $100 billion cloud deal",
+          "publisher": "The Star (Reuters)",
+          "url": "https://www.thestar.com.my/tech/tech-news/2026/04/21/anthropic-to-spend-over-100-billion-over-a-decade-on-amazon039s-cloud-tech",
+          "date": "2026-04-21"
+        },
+        {
+          "title": "Anthropic, PBC Form S-1",
+          "publisher": "SEC",
+          "url": "https://www.sec.gov/Archives/edgar/data/0002130357/000162828026067168/anthropicpbc-sx1.htm",
+          "date": "2026-10-26"
         }
       ]
     },
@@ -308,15 +380,27 @@
       "amount_usd_b": 114.5,
       "amount_note": "at least",
       "status": "signed",
-      "date_announced": "TODO",
+      "date_announced": "2025-10-23",
       "date_updated": "2026-10-31",
       "summary": "Anthropic committed at least $114.5B to Google Cloud through 2033.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Google and Anthropic confirm massive 1GW cloud deal with up to one million Google TPUs",
+          "publisher": "DatacenterDynamics",
+          "url": "https://www.datacenterdynamics.com/en/news/google-and-anthropic-confirm-massive-1gw-cloud-deal-with-up-to-one-million-google-tpus/",
+          "date": "2025-10-23"
+        },
+        {
+          "title": "Anthropic's S-1 shows it is at the hyperscalers' mercy",
+          "publisher": "The Stack",
+          "url": "https://www.thestack.technology/anthropic-s-1-shows-it-is-at-the-hyperscalers-mercy/",
+          "date": "2026-10"
+        },
+        {
+          "title": "Anthropic, PBC Form S-1",
+          "publisher": "SEC",
+          "url": "https://www.sec.gov/Archives/edgar/data/0002130357/000162828026067168/anthropicpbc-sx1.htm",
+          "date": "2026-10-26"
         }
       ]
     },
@@ -328,15 +412,21 @@
       "amount_usd_b": null,
       "amount_note": "undisclosed",
       "status": "closed",
-      "date_announced": "TODO",
+      "date_announced": "2025-03",
       "date_updated": "2026-10-31",
       "summary": "Google holds an early stake of about 14% in Anthropic.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Google owns 14 percent of generative AI business Anthropic",
+          "publisher": "DatacenterDynamics",
+          "url": "https://datacenterdynamics.com/en/news/google-owns-14-percent-of-generative-ai-business-anthropic",
+          "date": "2025-03"
+        },
+        {
+          "title": "Google revealed to hold 14% stake in Anthropic",
+          "publisher": "Computing",
+          "url": "https://computing.co.uk/news/2025/ai/google-revealed-to-hold-14-stake-in-anthropic",
+          "date": "2025-03"
         }
       ]
     },
@@ -348,15 +438,21 @@
       "amount_usd_b": 161,
       "amount_note": "about",
       "status": "signed",
-      "date_announced": "TODO",
+      "date_announced": "2026-04-07",
       "date_updated": "2026-10-31",
       "summary": "Anthropic is leasing about $161B of Google TPUs supplied through Broadcom.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Anthropic, Google and Broadcom compute deal",
+          "publisher": "The Next Web",
+          "url": "https://thenextweb.com/news/anthropic-google-broadcom-compute-deal",
+          "date": "2026-04-07"
+        },
+        {
+          "title": "Broadcom's AI growth story faces a $161 billion Anthropic test",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/articles/broadcoms-ai-growth-story-faces-a-161-billion-anthropic-test/",
+          "date": "2026-10"
         }
       ]
     },
@@ -368,15 +464,21 @@
       "amount_usd_b": 5,
       "amount_note": "up to",
       "status": "announced",
-      "date_announced": "TODO",
+      "date_announced": "2025-11-18",
       "date_updated": "2026-10-31",
       "summary": "Microsoft agreed to invest up to $5B in Anthropic.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Microsoft and NVIDIA to Invest in Anthropic as Part of New AI Partnership Deal",
+          "publisher": "Built In",
+          "url": "https://builtin.com/articles/anthropic-microsoft-nvidia-partnership-20251118",
+          "date": "2025-11-18"
+        },
+        {
+          "title": "Microsoft, Nvidia to invest in Anthropic as Claude maker commits $30 billion to Azure",
+          "publisher": "Khaleej Times (Reuters)",
+          "url": "https://www.khaleejtimes.com/business/tech/microsoft-nvidia-to-invest-in-anthropic-as-claude-maker-commits-30-billion-to-azure",
+          "date": "2025-11-18"
         }
       ]
     },
@@ -388,15 +490,21 @@
       "amount_usd_b": 44.9,
       "amount_note": null,
       "status": "signed",
-      "date_announced": "TODO",
+      "date_announced": "2025-11-18",
       "date_updated": "2026-10-31",
-      "summary": "Anthropic committed $44.9B to Microsoft Azure through 2033.",
+      "summary": "Anthropic committed $30B to Azure in Nov 2025; its IPO filing puts the total at $44.9B through 2033.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Microsoft, Nvidia to invest in Anthropic as Claude maker commits $30 billion to Azure",
+          "publisher": "Khaleej Times (Reuters)",
+          "url": "https://www.khaleejtimes.com/business/tech/microsoft-nvidia-to-invest-in-anthropic-as-claude-maker-commits-30-billion-to-azure",
+          "date": "2025-11-18"
+        },
+        {
+          "title": "Anthropic's S-1 shows it is at the hyperscalers' mercy",
+          "publisher": "The Stack",
+          "url": "https://www.thestack.technology/anthropic-s-1-shows-it-is-at-the-hyperscalers-mercy/",
+          "date": "2026-10"
         }
       ]
     },
@@ -408,15 +516,15 @@
       "amount_usd_b": 10,
       "amount_note": "up to",
       "status": "announced",
-      "date_announced": "TODO",
+      "date_announced": "2025-11-18",
       "date_updated": "2026-10-31",
       "summary": "Nvidia agreed to invest up to $10B in Anthropic.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Microsoft and NVIDIA to Invest in Anthropic as Part of New AI Partnership Deal",
+          "publisher": "Built In",
+          "url": "https://builtin.com/articles/anthropic-microsoft-nvidia-partnership-20251118",
+          "date": "2025-11-18"
         }
       ]
     },
@@ -428,15 +536,21 @@
       "amount_usd_b": 120.5,
       "amount_note": "up to",
       "status": "cancellable",
-      "date_announced": "TODO",
+      "date_announced": "2026-10-26",
       "date_updated": "2026-10-31",
       "summary": "Anthropic agreed to buy up to $120.5B of compute from SpaceX, most of which it can cancel on 90 days' notice.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Anthropic Reveals It Will Pay SpaceX Up to $120.5B for AI Compute",
+          "publisher": "TeslaNorth",
+          "url": "https://teslanorth.com/2026/10/26/anthropic-s1-spacex-120b-compute/",
+          "date": "2026-10-26"
+        },
+        {
+          "title": "Anthropic's $120B SpaceXAI Deal Has 90-Day Exit Clause, IPO Filing Reveals",
+          "publisher": "The Deep Dive",
+          "url": "https://thedeepdive.ca/anthropics-120b-spacexai-deal-has-90-day-exit-clause-ipo-filing-reveals/",
+          "date": "2026-10-27"
         }
       ]
     },
@@ -448,15 +562,21 @@
       "amount_usd_b": 44.6,
       "amount_note": "up to",
       "status": "signed",
-      "date_announced": "TODO",
+      "date_announced": "2026-08-27",
       "date_updated": "2026-10-31",
       "summary": "Anthropic contracted up to about $44.6B of capacity from Nscale in West Virginia.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Anthropic to Pay Nscale $45 Billion for Computing",
+          "publisher": "Bloomberg Government",
+          "url": "https://news.bgov.com/artificial-intelligence/anthropic-to-pay-nscale-45-billion-for-ai-computing-power",
+          "date": "2026-08"
+        },
+        {
+          "title": "West Virginia data center lands reported $45 billion AI investment, Morrisey says",
+          "publisher": "WDTV",
+          "url": "https://www.wdtv.com/2026/08/27/west-virginia-data-center-lands-reported-45-billion-ai-agreement-morrisey-says/",
+          "date": "2026-08-27"
         }
       ]
     },
@@ -468,15 +588,21 @@
       "amount_usd_b": 41.3,
       "amount_note": "about",
       "status": "signed",
-      "date_announced": "TODO",
+      "date_announced": "2026-09-01",
       "date_updated": "2026-10-31",
-      "summary": "Anthropic contracted about $41.3B of GPU capacity from Lambda.",
+      "summary": "Anthropic contracted Nvidia GPU capacity from Lambda, reported at $35B and put at about $41.3B in its IPO filing.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Anthropic signs $35 billion cloud deal with Nvidia-backed Lambda, source says",
+          "publisher": "The Star (Reuters)",
+          "url": "https://www.thestar.com.my/tech/tech-news/2026/09/01/anthropic-signs-35-billion-cloud-deal-with-nvidia-backed-lambda",
+          "date": "2026-09-01"
+        },
+        {
+          "title": "Anthropic's Payouts: Who's Getting the Compute Spends and How Much?",
+          "publisher": "CXOToday",
+          "url": "https://cxotoday.com/ai/anthropics-payouts-whos-getting-the-compute-spends-and-how-much/",
+          "date": "2026-10"
         }
       ]
     },
@@ -488,15 +614,21 @@
       "amount_usd_b": 10,
       "amount_note": null,
       "status": "closed",
-      "date_announced": "TODO",
+      "date_announced": "2026-01",
       "date_updated": "2026-10-31",
       "summary": "Nvidia's $10B investment in xAI converted into 122.8M SpaceX shares after the merger.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Nvidia's $21 billion SpaceX stake and $30 billion Intel shares",
+          "publisher": "Fortune",
+          "url": "https://www.fortune.com/2026/08/15/nvidia-21-billion-spacex-stake-30-billion-intel-shares/",
+          "date": "2026-08-15"
+        },
+        {
+          "title": "Nvidia discloses $21 billion SpaceX stake following xAI consolidation",
+          "publisher": "Techstrong.ai",
+          "url": "https://techstrong.ai/articles/nvidia-discloses-21-billion-spacex-stake-following-xai-consolidation/",
+          "date": "2026-08"
         }
       ]
     },
@@ -504,19 +636,25 @@
       "id": "spacex-nvidia-vera-rubin-lease",
       "from": "spacex",
       "to": "nvidia",
-      "category": "financing",
+      "category": "chips",
       "amount_usd_b": 40,
       "amount_note": null,
       "status": "signed",
-      "date_announced": "TODO",
+      "date_announced": "2026-10-26",
       "date_updated": "2026-10-31",
-      "summary": "SpaceX is leasing $40B of Nvidia Vera Rubin chips in a deal financed through Apollo.",
+      "summary": "SpaceX is getting about $40B of Nvidia Vera Rubin GPUs through a finance lease from an Apollo-managed lessor.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "SpaceX Secures $40 Billion in the Largest GPU Financing Ever",
+          "publisher": "SpaceX",
+          "url": "https://ir.spacex.com/updates/releases-details/2026/SPACEX-SECURES-40-BILLION-IN-THE-LARGEST-GPU-FINANCING-EVER-2026-EnDqGhTAB3",
+          "date": "2026-10-26"
+        },
+        {
+          "title": "SpaceX locks in $40B GPU financing deal with Apollo",
+          "publisher": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/26/spacex-locks-in-40b-gpu-financing-deal-with-apollo/",
+          "date": "2026-10-26"
         }
       ]
     },
@@ -528,15 +666,15 @@
       "amount_usd_b": 3,
       "amount_note": null,
       "status": "announced",
-      "date_announced": "TODO",
+      "date_announced": "2026-10-27",
       "date_updated": "2026-10-31",
-      "summary": "Nvidia is buying $3B of shares in Meta's equity raise.",
+      "summary": "Nvidia said it would buy $3B of shares in Meta's planned $95B equity raise; Meta says such interest is not binding.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Nvidia, AMD to invest $4 billion in Meta as it raises $95 billion for AI infrastructure",
+          "publisher": "Free Press Journal",
+          "url": "https://www.freepressjournal.in/tech/nvidia-amd-to-invest-4-billion-in-meta-as-it-raises-95-billion-for-ai-infrastructure",
+          "date": "2026-10-27"
         }
       ]
     },
@@ -546,17 +684,23 @@
       "to": "amd",
       "category": "chips",
       "amount_usd_b": 100,
-      "amount_note": "over",
+      "amount_note": "up to",
       "status": "signed",
-      "date_announced": "TODO",
+      "date_announced": "2026-02-24",
       "date_updated": "2026-10-31",
-      "summary": "Meta agreed to deploy 6GW of AMD MI450 GPUs worth over $100B, with a share warrant attached.",
+      "summary": "Meta agreed to deploy up to 6GW of AMD GPUs, valued at up to about $100B, and received a warrant for 160M AMD shares.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Facebook owner Meta to buy AI chips from AMD in deal worth up to $100 billion",
+          "publisher": "NY1 (AP)",
+          "url": "https://ny1.com/nyc/all-boroughs/ap-top-news/2026/02/24/facebook-owner-meta-to-buy-ai-chips-from-amd-in-deal-worth-up-to-100-billion",
+          "date": "2026-02-24"
+        },
+        {
+          "title": "Meta and AMD Announce New AI Infrastructure Deal Worth Billions",
+          "publisher": "Built In",
+          "url": "https://builtin.com/articles/meta-amd-ai-infrastructure-deal-20260224",
+          "date": "2026-02-24"
         }
       ]
     },
@@ -568,15 +712,15 @@
       "amount_usd_b": 35,
       "amount_note": "about",
       "status": "signed",
-      "date_announced": "TODO",
-      "date_updated": "2026-10-31",
-      "summary": "Meta contracted about $35B of CoreWeave capacity through 2032.",
+      "date_announced": "2025-09",
+      "date_updated": "2026-04-09",
+      "summary": "Meta has committed about $35B to CoreWeave: $14.2B in 2025 plus $21B more in April 2026, running to 2032.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "CoreWeave, Meta Strike Latest $21 Billion Deal for AI Computing",
+          "publisher": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-09/coreweave-expands-meta-deal-for-ai-computing-to-21-billion",
+          "date": "2026-04-09"
         }
       ]
     },
@@ -588,15 +732,21 @@
       "amount_usd_b": 30,
       "amount_note": "up to",
       "status": "signed",
-      "date_announced": "TODO",
-      "date_updated": "2026-10-31",
-      "summary": "Meta committed $3B to Nebius, expandable to as much as $30B.",
+      "date_announced": "2025-11",
+      "date_updated": "2026-03-16",
+      "summary": "Meta signed a $3B Nebius deal in 2025, then up to $27B more in 2026, of which $15B depends on spare capacity.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Meta commits up to $27 billion to Nebius in one of the largest AI infrastructure deals on record",
+          "publisher": "The Next Web",
+          "url": "https://thenextweb.com/news/meta-nebius-27-billion-ai-infrastructure-deal",
+          "date": "2026-03-16"
+        },
+        {
+          "title": "Dutch Nebius signs $27 billion deal with Meta",
+          "publisher": "Techzine",
+          "url": "https://www.techzine.eu/news/infrastructure/139622/dutch-nebius-signs-27-billion-deal-with-meta/",
+          "date": "2026-03-16"
         }
       ]
     },
@@ -608,15 +758,15 @@
       "amount_usd_b": 19.4,
       "amount_note": "up to",
       "status": "signed",
-      "date_announced": "TODO",
+      "date_announced": "2025-09-08",
       "date_updated": "2026-10-31",
       "summary": "Microsoft contracted $17.4B to $19.4B of Nebius capacity through 2031.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Microsoft inks AI infra deal with Yandex cofounder's biz for nearly $20B",
+          "publisher": "The Register",
+          "url": "https://www.theregister.com/2025/09/09/microsoft_inks_near_20b_deal/",
+          "date": "2025-09-09"
         }
       ]
     },
@@ -628,15 +778,21 @@
       "amount_usd_b": 8.3,
       "amount_note": "at least",
       "status": "signed",
-      "date_announced": "TODO",
-      "date_updated": "2026-10-31",
+      "date_announced": "2025-09-09",
+      "date_updated": "2026-01-26",
       "summary": "Nvidia invested $2B in CoreWeave equity and agreed to buy at least $6.3B of unsold capacity.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Nvidia Invests $2 Billion More in CoreWeave, Offers New Chip",
+          "publisher": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-01-26/nvidia-invests-another-2-billion-in-coreweave-offers-new-chip",
+          "date": "2026-01-26"
+        },
+        {
+          "title": "Nvidia commits $6.3B for CoreWeave's unused cloud capacity",
+          "publisher": "RCR Wireless",
+          "url": "https://www.rcrwireless.com/?p=424411",
+          "date": "2025-09"
         }
       ]
     },
@@ -648,15 +804,21 @@
       "amount_usd_b": 5,
       "amount_note": null,
       "status": "closed",
-      "date_announced": "TODO",
-      "date_updated": "2026-10-31",
+      "date_announced": "2025-09-18",
+      "date_updated": "2025-12-26",
       "summary": "Nvidia invested $5B in Intel for a stake of about 4%.",
       "sources": [
         {
-          "title": "TODO",
-          "publisher": "TODO",
-          "url": "TODO",
-          "date": "TODO"
+          "title": "Nvidia closes $5B Intel stock purchase under September deal",
+          "publisher": "IBS Electronics",
+          "url": "https://www.ibselectronics.com/resources/news/nvidia-closes-$5b-intel-stock-purchase-under-september-deal/",
+          "date": "2025-12"
+        },
+        {
+          "title": "Nvidia-Intel $5 billion deal done",
+          "publisher": "Quartz",
+          "url": "https://qz.com/nvidia-intel-5-billion-deal-done-ai-partnership",
+          "date": "2025-12"
         }
       ]
     }

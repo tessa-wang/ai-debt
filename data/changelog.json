@@ -2,11 +2,12 @@
   "entries": [
     {
       "date": "2026-11-05",
-      "headline": "Site rebuilt from the November 2026 prototype; 19 companies and 33 deals migrated.",
+      "headline": "Site rebuilt from the November 2026 prototype: 19 companies and 33 deals, with dates and sources researched.",
       "summary": [
         "Nvidia's \"up to $100B\" for OpenAI became $30B of equity plus a guarantee of up to $105B on OpenAI's leases.",
         "Anthropic ($965B) is now a second hub, with hundreds of billions in compute commitments to Google, Amazon, Broadcom, SpaceX, Microsoft and neoclouds.",
-        "Amazon invested $50B in OpenAI, which committed $138B to AWS. xAI and Cursor now sit inside SpaceX."
+        "Amazon invested $50B in OpenAI, which committed $138B to AWS. xAI and Cursor now sit inside SpaceX.",
+        "Every deal now has an announcement date and sources. Research corrected Oracle's Nvidia purchase to about $40B, and recorded that only $15B of Amazon's $50B for OpenAI was paid up front."
       ],
       "changes": [
         {
@@ -117,7 +118,7 @@
         {
           "deal_id": "amazon-openai-equity",
           "change": "added",
-          "note": "Migrated from prototype."
+          "note": "Migrated from prototype; status set to signed and amount to 'up to' ($15B paid up front, rest conditional)."
         },
         {
           "deal_id": "openai-aws-compute",
@@ -147,7 +148,7 @@
         {
           "deal_id": "oracle-nvidia-gpus",
           "change": "added",
-          "note": "Migrated from prototype."
+          "note": "Migrated from prototype; amount set to ~$40B per reporting (was 'tens of billions')."
         },
         {
           "deal_id": "openai-amd-gpus",
@@ -167,7 +168,7 @@
         {
           "deal_id": "openai-coreweave-compute",
           "change": "added",
-          "note": "Migrated from prototype."
+          "note": "Migrated from prototype; amount qualifier changed to 'up to' per CoreWeave."
         },
         {
           "deal_id": "amazon-anthropic-equity",
@@ -232,7 +233,7 @@
         {
           "deal_id": "spacex-nvidia-vera-rubin-lease",
           "change": "added",
-          "note": "Migrated from prototype."
+          "note": "Migrated from prototype; recategorised from financing to chips (Apollo, not Nvidia, is the lessor)."
         },
         {
           "deal_id": "nvidia-meta-equity",
@@ -242,7 +243,7 @@
         {
           "deal_id": "meta-amd-gpus",
           "change": "added",
-          "note": "Migrated from prototype."
+          "note": "Migrated from prototype; amount qualifier changed from 'over' to 'up to' per AP."
         },
         {
           "deal_id": "meta-coreweave-compute",

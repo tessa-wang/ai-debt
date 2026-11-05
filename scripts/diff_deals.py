@@ -122,6 +122,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--date", default=date.today().isoformat(), help="entry date (default: today)")
     ap.add_argument("--apply", action="store_true",
                     help="insert the entry at the top of <new-dir>/changelog.json")
+    ap.add_argument("--replace", action="store_true",
+                    help="with --apply, overwrite an existing entry with the same date")
     args = ap.parse_args(argv)
 
     if S.parse_date(args.date) is None:
@@ -142,7 +144,12 @@ def main(argv: list[str] | None = None) -> int:
             return 0
         path = args.new_dir / "changelog.json"
         log = S.load_json(path)
-        log["entries"] = [e for e in log["entries"] if e.get("date") != entry["date"]]
+        if any(e.get("date") == entry["date"] for e in log["entries"]):
+            if not args.replace:
+                print(f"\nchangelog.json already has an entry for {entry['date']}. "
+                      "Edit it by hand, pick another --date, or pass --replace to overwrite it.", file=sys.stderr)
+                return 1
+            log["entries"] = [e for e in log["entries"] if e.get("date") != entry["date"]]
         log["entries"].insert(0, entry)
         path.write_text(json.dumps(log, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         print(f"\nAdded entry to {path}. Edit the headline and summary before committing.", file=sys.stderr)

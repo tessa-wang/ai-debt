@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About · AI Money Web</title>
+  <meta name="description" content="What the AI Money Web shows, how it is researched and reviewed every week, and what its limits are.">
+  <meta name="theme-color" content="#0a0e13">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0e13'/%3E%3Ccircle cx='10' cy='11' r='4' fill='none' stroke='%23f5b53f' stroke-width='2'/%3E%3Ccircle cx='22' cy='10' r='3' fill='none' stroke='%239d93ee' stroke-width='2'/%3E%3Ccircle cx='16' cy='23' r='5' fill='none' stroke='%233987e5' stroke-width='2'/%3E%3Cpath d='M13 13l3 5M19 12l-2 6M14 11h5' stroke='%238593a1' stroke-width='1.2'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;600&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+  <script type="module" src="assets/js/about.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="./">AI<span>·</span>MONEY<span>·</span>WEB</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./">Map</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="about.html" aria-current="page">About</a>
+    </nav>
+    <p class="updated">Updated <time data-last-updated>…</time></p>
+  </header>
+
+  <main id="main" class="page-narrow prose">
+    <h1>About this map</h1>
+    <p class="dek">A weekly-updated map of the money linking the AI industry: who invests in whom, who buys whose chips, who has committed to rent whose computers, and who is lending or guaranteeing the debt that pays for it.</p>
+
+    <h2 id="what">What it shows</h2>
+    <p>Every circle is a company. Its area is proportional to its market value, or, for private companies, its latest reported valuation. AI labs (OpenAI, Anthropic, xAI) are drawn as glowing hubs, because most of the money flows towards them or out of them.</p>
+    <p>Every arrow is a deal. It points in the direction money or a commitment flows: from the investor, buyer or guarantor to the company receiving it. The line's width grows with the deal's size, its colour and dash pattern show the kind of deal, and it is faded when the deal is only reported or can be cancelled.</p>
+    <p>The interesting part is the loops. A chipmaker invests in an AI lab, and the lab commits to spend that money on the chipmaker's GPUs or its partners' cloud. Following the arrows round a loop shows how much of the industry's headline spending depends on the same few companies.</p>
+    <p id="about-counts" class="muted"></p>
+
+    <h3>Deal categories</h3>
+    <dl id="about-categories"></dl>
+
+    <h3>Deal status</h3>
+    <dl id="about-statuses"></dl>
+
+    <h2 id="process">How it is updated</h2>
+    <ol>
+      <li><strong>Research (every Saturday).</strong> An AI research assistant (Claude, running as a scheduled task) reviews the past week's news, company announcements and SEC filings (10-K, 10-Q, 8-K, S-1) for new or changed deals, and refreshes valuations.</li>
+      <li><strong>Draft.</strong> It produces updated data files in a fixed format, with at least one cited source for every deal and a one-sentence summary written in its own words. Anything not confirmed by a company or a filing is marked <em>reported</em>.</li>
+      <li><strong>Automatic checks.</strong> A validation script checks the files: every deal points to real companies, every date and category is valid, every deal has a source, and nothing looks suspicious (such as a deal over $1 trillion, or a closed deal going back to announced).</li>
+      <li><strong>Human review.</strong> A person reads the changes, opens the sources, fixes mistakes and only then publishes. The <a href="changelog.html">changelog</a> records what changed each week.</li>
+    </ol>
+
+    <h2 id="data">The data, in plain English</h2>
+    <p>The site is built entirely from small, public data files. Anyone can download them: <a href="data/companies.json">companies.json</a>, <a href="data/deals.json">deals.json</a> and <a href="data/changelog.json">changelog.json</a>.</p>
+    <dl>
+      <dt>A company</dt>
+      <dd>has a name; a type (public company, private company, or AI lab); a value in billions of US dollars, with the date it was measured and a note on where it comes from; optionally a parent (xAI is now part of SpaceX); and a short note on its role.</dd>
+      <dt>A deal</dt>
+      <dd>has a direction (from one company to another), a category, an amount in billions of dollars (or none, if it was not disclosed) with a qualifier like "up to" or "est.", a status, the date it was announced and last updated, a one-sentence summary, and a list of sources (title, publisher, link, date).</dd>
+      <dt>A changelog entry</dt>
+      <dd>has a date, a headline, a short summary, and a list of every company or deal added, updated or removed that week.</dd>
+    </dl>
+    <p>The technical version is in <a href="https://github.com/tessa-wang/ai-debt/blob/main/docs/DATA_SCHEMA.md">DATA_SCHEMA.md</a>.</p>
+
+    <h2 id="limitations">Limitations</h2>
+    <ul>
+      <li><strong>Reported is not confirmed.</strong> Many deals first appear as press reports citing unnamed sources. These are marked <em>reported</em> and faded until a company or a filing confirms them. Some never happen.</li>
+      <li><strong>Headline figures are not cash.</strong> "Up to $100B" usually means a ceiling spread over many years, often depending on milestones. Multi-year compute commitments can be renegotiated or, in some cases, cancelled on short notice. The "disclosed value" total adds these headline figures together, so it overstates the money that has actually moved and counts some money twice as it circulates.</li>
+      <li><strong>Some sources are paywalled.</strong> We link the original reporting where possible, including paywalled outlets such as Bloomberg and The Information, and prefer filings and press releases when they exist.</li>
+      <li><strong>Valuations change daily.</strong> Public market values are a snapshot on the date shown, and private valuations are from the last funding round, which can be months old. Circle sizes are a rough guide, not a live quote.</li>
+      <li><strong>Coverage is selective.</strong> The map follows the largest and most connected deals between major AI companies. It is not a complete list of every AI investment.</li>
+      <li><strong>AI-assisted research can be wrong.</strong> Every weekly update is checked by a person and every deal links to its sources, but mistakes are possible. If you spot one, please <a href="https://github.com/tessa-wang/ai-debt/issues">open an issue</a>.</li>
+    </ul>
+
+    <h2 id="credits">Credits</h2>
+    <p>Built by [YOUR NAME] and [TESSA'S NAME]. Research assisted by Claude. Diagram drawn with <a href="https://d3js.org/">D3</a>. Typeset in IBM Plex.</p>
+    <p>Summaries are written in our own words; all reporting belongs to the outlets linked in each deal's sources. Source code and data are on <a href="https://github.com/tessa-wang/ai-debt">GitHub</a>.</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>Not investment advice.</p>
+  </footer>
+</body>
+</html>

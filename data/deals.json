@@ -1,0 +1,664 @@
+{
+  "deals": [
+    {
+      "id": "nvidia-openai-equity",
+      "from": "nvidia",
+      "to": "openai",
+      "category": "investment",
+      "amount_usd_b": 30,
+      "amount_note": null,
+      "status": "closed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Nvidia took a $30B equity stake in OpenAI, replacing its earlier letter of intent to invest up to $100B.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-openai-lease-guarantee",
+      "from": "nvidia",
+      "to": "openai",
+      "category": "financing",
+      "amount_usd_b": 105,
+      "amount_note": "up to",
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Nvidia guarantees up to $105B of OpenAI's lease obligations on its Ohio data centers.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "amazon-openai-equity",
+      "from": "amazon",
+      "to": "openai",
+      "category": "investment",
+      "amount_usd_b": 50,
+      "amount_note": null,
+      "status": "closed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Amazon invested $50B in OpenAI's equity.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "openai-aws-compute",
+      "from": "openai",
+      "to": "amazon",
+      "category": "cloud",
+      "amount_usd_b": 138,
+      "amount_note": null,
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "OpenAI committed $138B to AWS compute, largely on Amazon's Trainium chips.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "softbank-openai-equity",
+      "from": "softbank",
+      "to": "openai",
+      "category": "investment",
+      "amount_usd_b": 30,
+      "amount_note": null,
+      "status": "closed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "SoftBank put $30B into OpenAI as co-lead of its $122B funding round.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "microsoft-openai-stake",
+      "from": "microsoft",
+      "to": "openai",
+      "category": "investment",
+      "amount_usd_b": null,
+      "amount_note": "undisclosed",
+      "status": "closed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Microsoft holds about 27% of OpenAI following the company's recapitalization.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "openai-azure-compute",
+      "from": "openai",
+      "to": "microsoft",
+      "category": "cloud",
+      "amount_usd_b": 250,
+      "amount_note": null,
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "OpenAI committed an additional $250B to Microsoft Azure.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "openai-oracle-compute",
+      "from": "openai",
+      "to": "oracle",
+      "category": "cloud",
+      "amount_usd_b": 300,
+      "amount_note": null,
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "OpenAI contracted about 4.5GW of Oracle cloud capacity worth roughly $300B over about five years.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "oracle-nvidia-gpus",
+      "from": "oracle",
+      "to": "nvidia",
+      "category": "chips",
+      "amount_usd_b": null,
+      "amount_note": "tens of billions",
+      "status": "reported",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Oracle is spending tens of billions of dollars on Nvidia GPUs for its data centers.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "openai-amd-gpus",
+      "from": "openai",
+      "to": "amd",
+      "category": "chips",
+      "amount_usd_b": 100,
+      "amount_note": "est.",
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "OpenAI agreed to deploy 6GW of AMD MI450 GPUs, estimated at about $100B.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "amd-openai-warrant",
+      "from": "amd",
+      "to": "openai",
+      "category": "investment",
+      "amount_usd_b": null,
+      "amount_note": "undisclosed",
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "AMD granted OpenAI a warrant for up to 160M AMD shares that vests as deployment milestones are met.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "openai-broadcom-custom-chips",
+      "from": "openai",
+      "to": "broadcom",
+      "category": "chips",
+      "amount_usd_b": null,
+      "amount_note": "undisclosed",
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "OpenAI and Broadcom are co-developing 10GW of custom AI accelerators.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "openai-coreweave-compute",
+      "from": "openai",
+      "to": "coreweave",
+      "category": "cloud",
+      "amount_usd_b": 22.4,
+      "amount_note": "about",
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "OpenAI contracted about $22.4B of GPU capacity from CoreWeave.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "amazon-anthropic-equity",
+      "from": "amazon",
+      "to": "anthropic",
+      "category": "investment",
+      "amount_usd_b": 13,
+      "amount_note": null,
+      "status": "closed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Amazon has invested $13B in Anthropic, with up to $20B more possible.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-aws-compute",
+      "from": "anthropic",
+      "to": "amazon",
+      "category": "cloud",
+      "amount_usd_b": 110,
+      "amount_note": "at least",
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Anthropic committed at least $110B to AWS through 2036.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-google-cloud-compute",
+      "from": "anthropic",
+      "to": "alphabet",
+      "category": "cloud",
+      "amount_usd_b": 114.5,
+      "amount_note": "at least",
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Anthropic committed at least $114.5B to Google Cloud through 2033.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "google-anthropic-stake",
+      "from": "alphabet",
+      "to": "anthropic",
+      "category": "investment",
+      "amount_usd_b": null,
+      "amount_note": "undisclosed",
+      "status": "closed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Google holds an early stake of about 14% in Anthropic.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-broadcom-tpus",
+      "from": "anthropic",
+      "to": "broadcom",
+      "category": "chips",
+      "amount_usd_b": 161,
+      "amount_note": "about",
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Anthropic is leasing about $161B of Google TPUs supplied through Broadcom.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "microsoft-anthropic-equity",
+      "from": "microsoft",
+      "to": "anthropic",
+      "category": "investment",
+      "amount_usd_b": 5,
+      "amount_note": "up to",
+      "status": "announced",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Microsoft agreed to invest up to $5B in Anthropic.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-azure-compute",
+      "from": "anthropic",
+      "to": "microsoft",
+      "category": "cloud",
+      "amount_usd_b": 44.9,
+      "amount_note": null,
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Anthropic committed $44.9B to Microsoft Azure through 2033.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-anthropic-equity",
+      "from": "nvidia",
+      "to": "anthropic",
+      "category": "investment",
+      "amount_usd_b": 10,
+      "amount_note": "up to",
+      "status": "announced",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Nvidia agreed to invest up to $10B in Anthropic.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-spacex-compute",
+      "from": "anthropic",
+      "to": "spacex",
+      "category": "cloud",
+      "amount_usd_b": 120.5,
+      "amount_note": "up to",
+      "status": "cancellable",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Anthropic agreed to buy up to $120.5B of compute from SpaceX, most of which it can cancel on 90 days' notice.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-nscale-compute",
+      "from": "anthropic",
+      "to": "nscale",
+      "category": "cloud",
+      "amount_usd_b": 44.6,
+      "amount_note": "up to",
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Anthropic contracted up to about $44.6B of capacity from Nscale in West Virginia.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-lambda-compute",
+      "from": "anthropic",
+      "to": "lambda",
+      "category": "cloud",
+      "amount_usd_b": 41.3,
+      "amount_note": "about",
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Anthropic contracted about $41.3B of GPU capacity from Lambda.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-xai-stake",
+      "from": "nvidia",
+      "to": "spacex",
+      "category": "investment",
+      "amount_usd_b": 10,
+      "amount_note": null,
+      "status": "closed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Nvidia's $10B investment in xAI converted into 122.8M SpaceX shares after the merger.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "spacex-nvidia-vera-rubin-lease",
+      "from": "spacex",
+      "to": "nvidia",
+      "category": "financing",
+      "amount_usd_b": 40,
+      "amount_note": null,
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "SpaceX is leasing $40B of Nvidia Vera Rubin chips in a deal financed through Apollo.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-meta-equity",
+      "from": "nvidia",
+      "to": "meta",
+      "category": "investment",
+      "amount_usd_b": 3,
+      "amount_note": null,
+      "status": "announced",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Nvidia is buying $3B of shares in Meta's equity raise.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "meta-amd-gpus",
+      "from": "meta",
+      "to": "amd",
+      "category": "chips",
+      "amount_usd_b": 100,
+      "amount_note": "over",
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Meta agreed to deploy 6GW of AMD MI450 GPUs worth over $100B, with a share warrant attached.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "meta-coreweave-compute",
+      "from": "meta",
+      "to": "coreweave",
+      "category": "cloud",
+      "amount_usd_b": 35,
+      "amount_note": "about",
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Meta contracted about $35B of CoreWeave capacity through 2032.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "meta-nebius-compute",
+      "from": "meta",
+      "to": "nebius",
+      "category": "cloud",
+      "amount_usd_b": 30,
+      "amount_note": "up to",
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Meta committed $3B to Nebius, expandable to as much as $30B.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "microsoft-nebius-compute",
+      "from": "microsoft",
+      "to": "nebius",
+      "category": "cloud",
+      "amount_usd_b": 19.4,
+      "amount_note": "up to",
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Microsoft contracted $17.4B to $19.4B of Nebius capacity through 2031.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-coreweave-equity-backstop",
+      "from": "nvidia",
+      "to": "coreweave",
+      "category": "investment",
+      "amount_usd_b": 8.3,
+      "amount_note": "at least",
+      "status": "signed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Nvidia invested $2B in CoreWeave equity and agreed to buy at least $6.3B of unsold capacity.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-intel-equity",
+      "from": "nvidia",
+      "to": "intel",
+      "category": "investment",
+      "amount_usd_b": 5,
+      "amount_note": null,
+      "status": "closed",
+      "date_announced": "TODO",
+      "date_updated": "2026-10-31",
+      "summary": "Nvidia invested $5B in Intel for a stake of about 4%.",
+      "sources": [
+        {
+          "title": "TODO",
+          "publisher": "TODO",
+          "url": "TODO",
+          "date": "TODO"
+        }
+      ]
+    }
+  ]
+}

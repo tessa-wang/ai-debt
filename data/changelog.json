@@ -1,0 +1,275 @@
+{
+  "entries": [
+    {
+      "date": "2026-11-05",
+      "headline": "Site rebuilt from the November 2026 prototype; 19 companies and 33 deals migrated.",
+      "summary": [
+        "Nvidia's \"up to $100B\" for OpenAI became $30B of equity plus a guarantee of up to $105B on OpenAI's leases.",
+        "Anthropic ($965B) is now a second hub, with hundreds of billions in compute commitments to Google, Amazon, Broadcom, SpaceX, Microsoft and neoclouds.",
+        "Amazon invested $50B in OpenAI, which committed $138B to AWS. xAI and Cursor now sit inside SpaceX."
+      ],
+      "changes": [
+        {
+          "company_id": "nvidia",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "company_id": "amd",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "company_id": "intel",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "company_id": "broadcom",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "company_id": "softbank",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "company_id": "openai",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "company_id": "amazon",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "company_id": "anthropic",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "company_id": "spacex",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "company_id": "xai",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "company_id": "cursor",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "company_id": "oracle",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "company_id": "microsoft",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "company_id": "alphabet",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "company_id": "meta",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "company_id": "coreweave",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "company_id": "nebius",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "company_id": "nscale",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "company_id": "lambda",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "nvidia-openai-equity",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "nvidia-openai-lease-guarantee",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "amazon-openai-equity",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "openai-aws-compute",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "softbank-openai-equity",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "microsoft-openai-stake",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "openai-azure-compute",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "openai-oracle-compute",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "oracle-nvidia-gpus",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "openai-amd-gpus",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "amd-openai-warrant",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "openai-broadcom-custom-chips",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "openai-coreweave-compute",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "amazon-anthropic-equity",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "anthropic-aws-compute",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "anthropic-google-cloud-compute",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "google-anthropic-stake",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "anthropic-broadcom-tpus",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "microsoft-anthropic-equity",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "anthropic-azure-compute",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "nvidia-anthropic-equity",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "anthropic-spacex-compute",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "anthropic-nscale-compute",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "anthropic-lambda-compute",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "nvidia-xai-stake",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "spacex-nvidia-vera-rubin-lease",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "nvidia-meta-equity",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "meta-amd-gpus",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "meta-coreweave-compute",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "meta-nebius-compute",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "microsoft-nebius-compute",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "nvidia-coreweave-equity-backstop",
+          "change": "added",
+          "note": "Migrated from prototype."
+        },
+        {
+          "deal_id": "nvidia-intel-equity",
+          "change": "added",
+          "note": "Migrated from prototype."
+        }
+      ]
+    }
+  ]
+}

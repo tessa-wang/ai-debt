@@ -1,157 +1,104 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The AI Money Web</title>
-<style>
-:root{
-  --bg:#ffffff;--text:#1f1e1c;--muted:#6b6a65;--border:#d3d1c7;
-  --gray-fill:#F1EFE8;--gray-stroke:#888780;--gray-title:#444441;--gray-sub:#5F5E5A;
-  --pur-fill:#EEEDFE;--pur-stroke:#534AB7;
-}
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#1c1b19;--text:#ecebe6;--muted:#a3a29b;--border:#444441;
-    --gray-fill:#444441;--gray-stroke:#B4B2A9;--gray-title:#F1EFE8;--gray-sub:#D3D1C7;
-    --pur-fill:#3C3489;--pur-stroke:#AFA9EC;
-  }
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
-main{max-width:760px;margin:0 auto;padding:32px 16px 48px}
-h1{font-size:24px;font-weight:600;margin:0 0 4px}
-.sub{color:var(--muted);font-size:14px;margin:0 0 12px}
-.th{font-size:14px;font-weight:600;fill:var(--text)}
-.ts{font-size:12px;fill:var(--muted)}
-.lbl{paint-order:stroke;stroke:var(--bg);stroke-width:4px;stroke-linejoin:round;pointer-events:none}
-.n-gray circle{fill:var(--gray-fill);stroke:var(--gray-stroke)}
-.n-gray .th{fill:var(--gray-title)} .n-gray .ts{fill:var(--gray-sub)}
-.n-purple circle{fill:var(--pur-fill);stroke:var(--pur-stroke)}
-.node{cursor:pointer}.node:hover circle{opacity:.8}
-.chip{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:13px;padding:4px 10px;border:1px solid var(--border);border-radius:999px;background:transparent;color:var(--text);cursor:pointer}
-.chip.off{opacity:.35}
-#panel{font-size:14px;border-top:1px solid var(--border);padding-top:12px;margin-top:4px}
-#panel .row{display:flex;gap:8px;align-items:baseline;padding:2px 0}
-#panel .dot{width:9px;height:9px;border-radius:50%;flex:none;transform:translateY(1px)}
-.muted{color:var(--muted);font-size:13px}
-footer{margin-top:24px;font-size:12px;color:var(--muted)}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Money Web</title>
+  <meta name="description" content="An interactive map of the investments, chip purchases, cloud contracts and debt financing that link Nvidia, OpenAI, Anthropic, Microsoft, Amazon, Oracle and the neoclouds. Updated weekly.">
+  <meta name="theme-color" content="#0a0e13">
+  <meta property="og:title" content="AI Money Web">
+  <meta property="og:description" content="Who funds whom in AI: investments, chip deals, compute contracts and debt, mapped and updated weekly.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0e13'/%3E%3Ccircle cx='10' cy='11' r='4' fill='none' stroke='%23f5b53f' stroke-width='2'/%3E%3Ccircle cx='22' cy='10' r='3' fill='none' stroke='%239d93ee' stroke-width='2'/%3E%3Ccircle cx='16' cy='23' r='5' fill='none' stroke='%233987e5' stroke-width='2'/%3E%3Cpath d='M13 13l3 5M19 12l-2 6M14 11h5' stroke='%238593a1' stroke-width='1.2'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;600&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous"></script>
+  <script type="module" src="assets/js/main.js"></script>
 </head>
 <body>
-<main>
-<h1>How Nvidia, OpenAI and Anthropic fuel the AI money machine</h1>
-<p class="sub">Updated November 2026. Circles sized by market value or latest private valuation (Oct 28–30, 2026). Line width roughly tracks deal size. Click a company to see its deals; click a legend item to hide that type.</p>
-<div id="legend" style="display:flex;flex-wrap:wrap;gap:8px;padding:4px 0 8px"></div>
-<svg id="web" width="100%" viewBox="0 0 680 612" role="img" aria-label="Network of AI-industry deals as of November 2026">
-<defs id="defs"></defs>
-<g id="edges"></g><g id="nodes"></g><g id="labels"></g>
-</svg>
-<div id="panel"></div>
-<footer>Sources: company filings (SEC 10-Q, 8-K, S-1), Bloomberg, CNBC, Reuters, TechCrunch and others, as of Oct 31, 2026. Some figures are reported rather than confirmed. Market values moved sharply in late October 2026.</footer>
-</main>
-<script>
-const N={
-nvidia:{x:340,y:95,r:42,n:'Nvidia',v:'$5.2T',lp:'in',note:'Holds $99B of equity investments plus $25B more committed (July 2026 10-Q). Now an investor, guarantor and chip lessor.'},
-amd:{x:150,y:110,r:18,n:'AMD',v:'$930B',lp:'left',note:'Gave both OpenAI and Meta warrants for up to 160M shares tied to 6GW GPU deals.'},
-intel:{x:225,y:40,r:11,n:'Intel',v:'$348B',lp:'left',note:'Fell 28.6% on Oct 30, 2026. Nvidia owns about 4%.'},
-broadcom:{x:540,y:105,r:24,n:'Broadcom',v:'$1.66T',lp:'right',note:'Builds OpenAI\u2019s custom chips and leases Google TPUs to Anthropic.'},
-softbank:{x:60,y:230,r:9,n:'SoftBank',v:'not sized',lp:'below',u:1,note:'Co-led OpenAI\u2019s $122B round; co-owner of Stargate.'},
-openai:{x:180,y:300,r:17,n:'OpenAI',v:'$852B',lp:'left',lab:1,note:'Last priced at $852B (Mar 2026). A $1.25T round is in progress; target reportedly cut from $30B to about $20B.'},
-amazon:{x:340,y:250,r:30,n:'Amazon',v:'$2.65T',lp:'in',note:'Biggest new node: backs both labs and sells compute to both.'},
-anthropic:{x:500,y:300,r:18,n:'Anthropic',v:'$965B',lp:'below',lab:1,note:'Series H at $965B (May 2026). IPO filing (Oct 26) shows roughly $657B of compute commitments; per-counterparty figures shown here.'},
-spacex:{x:622,y:255,r:26,n:'SpaceX',v:'$1.96T',lp:'in',note:'Now includes xAI (merged Feb 2026) and Cursor (bought Aug 2026). Listed June 2026.'},
-oracle:{x:70,y:400,r:12,n:'Oracle',v:'$396B',lp:'below',note:'Debt-funded build-out; further capital raises capped at $20B through FY2030.'},
-microsoft:{x:340,y:410,r:36,n:'Microsoft',v:'$3.9T',lp:'in',note:'Holds about 27% of OpenAI; exclusivity ended in April 2026.'},
-google:{x:600,y:400,r:34,n:'Alphabet',v:'$3.5T',lp:'in',note:'Fell about 12.6% on Oct 29; sized after the drop.'},
-meta:{x:578,y:525,r:23,n:'Meta',v:'$1.58T',lp:'in',note:'Raising up to $95B; Nvidia, AMD and Broadcom offered to buy its shares.'},
-coreweave:{x:170,y:555,r:9,n:'CoreWeave',v:'~$30B',lp:'below',note:'Stock down 36% in October; five-year CDS near 1,145bp, the web\u2019s main stress point.'},
-nebius:{x:280,y:560,r:9,n:'Nebius',v:'~$47B',lp:'below',note:'Two customers (Microsoft, Meta) make up most of its backlog.'},
-nscale:{x:380,y:560,r:9,n:'Nscale',v:'~$15B',lp:'below',note:'Filed for IPO Sept 2026; reportedly in talks for a second ~$45B Anthropic deal.'},
-lambda:{x:470,y:555,r:9,n:'Lambda',v:'not sized',lp:'below',u:1,note:'Private neocloud.'}
-};
-const C={chips:{c:'#D4537E',d:'0.1 4.5',l:'Chips & hardware'},inv:{c:'#1D9E75',d:'6 4',l:'Equity investment'},cloud:{c:'#378ADD',d:'',l:'Cloud & compute'},fin:{c:'#BA7517',d:'10 3 2 3',l:'Debt, guarantees & leases'}};
-const E=[
-['nvidia','openai','inv',30,'$30B equity (replaced the "up to $100B" letter of intent)',.18],
-['nvidia','openai','fin',105,'Guarantee of up to $105B on OpenAI\u2019s Ohio data-center leases',-.2],
-['amazon','openai','inv',50,'$50B equity investment',.2],
-['openai','amazon','cloud',138,'$138B AWS commitment (Trainium)',.2],
-['softbank','openai','inv',30,'$30B, co-led the $122B round',.15],
-['microsoft','openai','inv',0,'About 27% stake after recapitalization',.2],
-['openai','microsoft','cloud',250,'$250B incremental Azure commitment',.2],
-['openai','oracle','cloud',300,'$300B, about 4.5GW over ~5 years',.15],
-['oracle','nvidia','chips',0,'Tens of billions on Nvidia GPUs',-.18],
-['openai','amd','chips',100,'6GW of MI450 GPUs (~$100B est.)',.18],
-['amd','openai','inv',0,'Warrant for up to 160M AMD shares (vests on milestones)',.18],
-['openai','broadcom','chips',0,'10GW of custom accelerators',-.18],
-['openai','coreweave','cloud',22,'About $22.4B of GPU capacity',.12],
-['amazon','anthropic','inv',13,'$13B invested, up to $20B more',.2],
-['anthropic','amazon','cloud',110,'At least $110B on AWS through 2036',.2],
-['anthropic','google','cloud',114,'At least $114.5B on Google Cloud through 2033',.18],
-['google','anthropic','inv',0,'Early stake of about 14%',.18],
-['anthropic','broadcom','chips',161,'About $161B of Google TPU leases via Broadcom',.15],
-['microsoft','anthropic','inv',5,'Up to $5B',.2],
-['anthropic','microsoft','cloud',45,'$44.9B on Azure through 2033',.2],
-['nvidia','anthropic','inv',10,'Up to $10B',.18],
-['anthropic','spacex','cloud',120,'Up to $120.5B of compute, mostly cancellable on 90 days\u2019 notice',.18,1],
-['anthropic','nscale','cloud',45,'Up to ~$44.6B (West Virginia)',.1],
-['anthropic','lambda','cloud',41,'About $41.3B of GPU capacity',.1],
-['nvidia','spacex','inv',10,'$10B xAI stake, now 122.8M SpaceX shares',.18],
-['spacex','nvidia','fin',40,'$40B lease of Vera Rubin chips, financed via Apollo',.18],
-['nvidia','meta','inv',3,'$3B in Meta\u2019s equity raise',.2],
-['meta','amd','chips',100,'6GW of MI450 GPUs, over $100B (plus share warrant)',.25],
-['meta','coreweave','cloud',35,'About $35B through 2032',.18],
-['meta','nebius','cloud',30,'$3B plus up to $27B',.18],
-['microsoft','nebius','cloud',19,'$17.4\u201319.4B through 2031',.15],
-['nvidia','coreweave','inv',8,'$2B equity plus at least $6.3B capacity backstop',-.08],
-['nvidia','intel','inv',5,'$5B for about a 4% stake',.2]
-];
-const NS='http://www.w3.org/2000/svg',on={chips:1,inv:1,cloud:1,fin:1};let sel=null;
-const mk=(t,a,p)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p&&p.appendChild(e);return e};
-const defs=document.getElementById('defs');
-for(const k in C){const m=mk('marker',{id:'arr-'+k,viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:6,markerHeight:6,orient:'auto-start-reverse'},defs);
-mk('path',{d:'M2 1L8 5L2 9',fill:'none',stroke:C[k].c,'stroke-width':1.5,'stroke-linecap':'round','stroke-linejoin':'round'},m)}
-const eg=document.getElementById('edges'),ng=document.getElementById('nodes'),lg=document.getElementById('labels');
-const paths=E.map(e=>{const s=N[e[0]],t=N[e[1]],dx=t.x-s.x,dy=t.y-s.y,k=e[5];
-const cx=(s.x+t.x)/2-dy*k,cy=(s.y+t.y)/2+dx*k;
-const u=(a,b)=>{const l=Math.hypot(cx-a,cy-b);return[(cx-a)/l,(cy-b)/l]};
-const[ux,uy]=u(s.x,s.y),[vx,vy]=u(t.x,t.y);
-const p=mk('path',{d:`M${s.x+ux*(s.r+2)} ${s.y+uy*(s.r+2)} Q${cx} ${cy} ${t.x+vx*(t.r+5)} ${t.y+vy*(t.r+5)}`,fill:'none',stroke:C[e[2]].c,'stroke-width':Math.min(4.5,1.2+e[3]/75),'stroke-dasharray':C[e[2]].d,'stroke-linecap':'round','marker-end':`url(#arr-${e[2]})`,opacity:e[6]?.5:.85},eg);
-mk('title',{},p).textContent=N[e[0]].n+' \u2192 '+N[e[1]].n+': '+e[4];return p});
-for(const id in N){const n=N[id];
-const g=mk('g',{class:'node '+(n.lab?'n-purple':'n-gray'),'data-id':id},ng);
-mk('circle',{cx:n.x,cy:n.y,r:n.r,'stroke-width':n.lab?1.5:.75,'stroke-dasharray':n.u?'3 2':''},g);
-g.addEventListener('click',()=>select(sel===id?null:id));
-if(n.lp==='in'){const a=mk('text',{class:'th',x:n.x,y:n.y-8,'text-anchor':'middle','dominant-baseline':'central'},g);a.textContent=n.n;
-const b=mk('text',{class:'ts',x:n.x,y:n.y+9,'text-anchor':'middle','dominant-baseline':'central'},g);b.textContent=n.v}
-else{let x=n.x,y1,anc='middle';
-if(n.lp==='below'){y1=n.y+n.r+12}else if(n.lp==='left'){x=n.x-n.r-6;anc='end';y1=n.y-8}else{x=n.x+n.r+6;anc='start';y1=n.y-8}
-const a=mk('text',{class:'th lbl',x,y:y1,'text-anchor':anc,'dominant-baseline':'central','data-id':id},lg);a.textContent=n.n;
-const b=mk('text',{class:'ts lbl',x,y:y1+16,'text-anchor':anc,'dominant-baseline':'central','data-id':id},lg);b.textContent=n.v}}
-const leg=document.getElementById('legend');
-for(const k in C){const b=document.createElement('button');b.className='chip';
-b.innerHTML=`<svg width="26" height="8" aria-hidden="true"><line x1="2" y1="4" x2="24" y2="4" stroke="${C[k].c}" stroke-width="2.5" stroke-dasharray="${C[k].d}" stroke-linecap="round"/></svg>${C[k].l}`;
-b.onclick=()=>{on[k]=!on[k];b.classList.toggle('off',!on[k]);draw()};leg.appendChild(b)}
-function draw(){const linked=new Set();
-E.forEach((e,i)=>{const vis=on[e[2]];const hit=!sel||e[0]===sel||e[1]===sel;
-if(vis&&hit&&sel){linked.add(e[0]);linked.add(e[1])}
-paths[i].style.display=vis?'':'none';paths[i].style.opacity=hit?'':'0.07'});
-document.querySelectorAll('[data-id]').forEach(el=>{const id=el.getAttribute('data-id');el.style.opacity=!sel||id===sel||linked.has(id)?1:.25});
-panel()}
-function select(id){sel=id;draw()}
-function row(e,other,dir){return `<div class="row"><span class="dot" style="background:${C[e[2]].c}"></span><span><b style="font-weight:600">${dir} ${N[other].n}</b> \u2014 ${e[4]}</span></div>`}
-function panel(){const p=document.getElementById('panel');
-if(!sel){p.innerHTML=`<div style="font-weight:600">What changed since the 2025 picture</div>
-<div class="row"><span class="dot" style="background:#BA7517"></span><span>Nvidia\u2019s \u201cup to $100B\u201d for OpenAI became $30B of equity plus a guarantee of up to $105B on OpenAI\u2019s leases.</span></div>
-<div class="row"><span class="dot" style="background:#7F77DD"></span><span>Anthropic ($965B) is now a second hub, with hundreds of billions in compute commitments to Google, Amazon, Broadcom, SpaceX, Microsoft and neoclouds.</span></div>
-<div class="row"><span class="dot" style="background:#1D9E75"></span><span>Amazon invested $50B in OpenAI, which committed $138B to AWS. xAI and Cursor now sit inside SpaceX.</span></div>
-<div class="muted" style="margin-top:6px">Faded line = cancellable commitment. Dashed circle = not sized.</div>`;return}
-const n=N[sel],out=E.filter(e=>e[0]===sel&&on[e[2]]),inn=E.filter(e=>e[1]===sel&&on[e[2]]);
-p.innerHTML=`<div style="font-weight:600">${n.n} <span class="muted">${n.v}</span></div><div class="muted" style="margin-bottom:6px">${n.note}</div>`+
-(out.length?`<div class="muted">Money or commitments going out</div>`+out.map(e=>row(e,e[1],'To')).join(''):'')+
-(inn.length?`<div class="muted" style="margin-top:6px">Money or commitments coming in</div>`+inn.map(e=>row(e,e[0],'From')).join(''):'')+
-`<div style="margin-top:8px"><button class="chip" onclick="select(null)">Show all</button></div>`}
-draw();
-</script>
+  <a class="skip-link" href="#panel">Skip to deal details</a>
+
+  <header class="site-header">
+    <a class="brand" href="./">AI<span>·</span>MONEY<span>·</span>WEB</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./" aria-current="page">Map</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="about.html">About</a>
+    </nav>
+    <p class="updated">Updated <time data-last-updated>…</time></p>
+  </header>
+
+  <main id="main">
+    <h1>Who funds whom in AI</h1>
+    <p class="dek">Investments, chip purchases, cloud contracts and debt that tie the AI industry together. Much of the money goes in a circle: chipmakers and cloud providers invest in AI labs, and the labs commit to spend it back with them.</p>
+
+    <dl class="stats" aria-label="Currently shown">
+      <div><dt>Companies</dt><dd id="stat-companies">–</dd></div>
+      <div><dt>Deals</dt><dd id="stat-deals">–</dd></div>
+      <div><dt>Disclosed value</dt><dd id="stat-total" class="stat-total">–</dd></div>
+      <div><dt>Reported or cancellable</dt><dd id="stat-weak">–</dd></div>
+    </dl>
+
+    <section class="controls" aria-label="Map controls">
+      <div class="filters" id="filters" role="group" aria-label="Deal categories"></div>
+      <label class="check"><input type="checkbox" id="show-cancelled"> <span>Show cancelled (<span data-count>0</span>)</span></label>
+      <div class="timeline" id="timeline">
+        <button type="button" class="play-btn" id="tl-play" aria-pressed="false" aria-label="Play timeline"><span class="play-icon" aria-hidden="true">▶</span></button>
+        <label for="tl-range">Announced up to</label>
+        <input type="range" id="tl-range">
+        <output id="tl-value" for="tl-range" aria-live="off"></output>
+        <p class="tl-note" id="tl-note"></p>
+      </div>
+    </section>
+
+    <div class="map-wrap">
+      <div class="map-stage">
+        <svg id="map" role="group" aria-label="Network of AI-industry deals. Each company is a button: press Tab to move between companies and Enter to open its deals. Every deal is also listed in the table below the map."></svg>
+        <div class="zoom-controls">
+          <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
+          <button type="button" id="zoom-out" aria-label="Zoom out">−</button>
+          <button type="button" id="zoom-reset" aria-label="Reset zoom">⟲</button>
+        </div>
+        <p class="map-hint">Pinch or Ctrl + scroll to zoom</p>
+        <div class="tooltip" id="tooltip" role="dialog" hidden></div>
+      </div>
+
+      <aside class="panel" id="panel" tabindex="-1" aria-label="Deal details"></aside>
+    </div>
+
+    <section class="legend" aria-labelledby="legend-title">
+      <h2 id="legend-title">How to read the map</h2>
+      <ul>
+        <li><svg width="34" height="34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#121922" stroke="#5d6c7c"/></svg>Circle area = market value or latest private valuation</li>
+        <li><svg width="34" height="34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="none" stroke="#9d93ee" stroke-opacity=".45" stroke-dasharray="2 3"/><circle cx="17" cy="17" r="11" fill="#1d1a3d" stroke="#9d93ee" stroke-width="2"/></svg>AI lab (the hubs of the web)</li>
+        <li><svg width="34" height="34" aria-hidden="true"><circle cx="17" cy="17" r="11" fill="none" stroke="#5d6c7c" stroke-dasharray="3 3"/></svg>Dashed outline = no current valuation</li>
+      </ul>
+      <ul>
+        <li><svg width="44" height="16" aria-hidden="true"><path d="M2 8 H40" stroke="#b3bec9" stroke-width="1.5"/><path d="M36 4 L41 8 L36 12" fill="none" stroke="#b3bec9" stroke-width="1.5"/></svg>Arrow = direction money or commitment flows</li>
+        <li><svg width="44" height="16" aria-hidden="true"><path d="M2 5 H40" stroke="#b3bec9" stroke-width="1.2"/><path d="M2 12 H40" stroke="#b3bec9" stroke-width="6"/></svg>Line width = deal size</li>
+        <li><svg width="44" height="16" aria-hidden="true"><path d="M2 8 H40" stroke="#b3bec9" stroke-width="3" opacity=".38"/></svg>Faded = reported only, or cancellable</li>
+      </ul>
+      <ul id="legend-cats" aria-label="Line colour and pattern by category"></ul>
+    </section>
+
+    <details class="table-wrap" id="deal-table">
+      <summary>All deals as a table (<span data-count>0</span> shown)</summary>
+      <div class="table-scroll">
+        <table>
+          <caption class="sr-only">Deals currently shown on the map, largest first. Follows the category filters and timeline.</caption>
+          <thead>
+            <tr><th scope="col">From</th><th scope="col">To</th><th scope="col">Category</th><th scope="col" class="right">Amount</th><th scope="col">Status</th><th scope="col">Announced</th><th scope="col">Summary</th><th scope="col">Sources</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </details>
+  </main>
+
+  <footer class="site-footer">
+    <p>Amounts are in US dollars and are often headline figures ("up to"), not cash paid. Some deals are reported, not confirmed. <a href="about.html#limitations">Read the limitations</a>.</p>
+    <p>Data is open: <a href="data/deals.json">deals.json</a> · <a href="data/companies.json">companies.json</a></p>
+  </footer>
 </body>
 </html>

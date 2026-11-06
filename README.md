@@ -3,6 +3,9 @@
 An interactive, weekly-updated map of the money flowing between the companies building AI.
 
 🔗 Live site: https://tessa-wang.github.io/ai-debt/
+
+![The map: companies as circles sized by value, deals as arrows coloured by category](docs/screenshot.png)
+
 ---
 
 ## What this is
@@ -44,19 +47,29 @@ Weekly research  →  Python validation  →  Human review  →  Published site
 ## Project structure
 
 ```
-├── index.html          Main interactive diagram
-├── changelog.html      Weekly changes
-├── about.html          Methodology and limitations
-├── assets/             CSS and JavaScript
+├── index.html            Main interactive diagram
+├── changelog.html        Weekly changes
+├── about.html            Methodology and limitations
+├── assets/
+│   ├── style.css         Dark "finance terminal" theme
+│   └── js/               ES modules: layout, graph, panel, timeline, …
 ├── data/
-│   ├── companies.json  Companies and valuations
-│   ├── deals.json      Every deal, with status and sources
-│   └── changelog.json  Weekly change history
+│   ├── companies.json    Companies and valuations
+│   ├── deals.json        Every deal, with status and sources
+│   ├── changelog.json    Weekly change history
+│   ├── meta.json         "Last updated" date shown in the header
+│   └── layout.json       Pinned positions for the biggest companies
 ├── scripts/
-│   ├── validate.py     Checks data before publishing
-│   └── diff_deals.py   Drafts the weekly changelog
-└── docs/               Data schema and weekly update instructions
+│   ├── validate.py       Checks data before publishing
+│   ├── diff_deals.py     Drafts the weekly changelog
+│   └── schema.py         Rules shared by both scripts
+├── docs/
+│   ├── DATA_SCHEMA.md    Field-by-field data format
+│   └── WEEKLY_UPDATE.md  Scheduled-task prompt and review checklist
+└── .github/workflows/    Runs validate.py on every push and pull request
 ```
+
+There is no build step: plain HTML, CSS and JavaScript, with D3 v7.9.0 loaded from a pinned CDN URL. The map is laid out by a seeded force simulation around pinned anchors, so it looks the same on every visit.
 
 ## Run it locally
 
@@ -73,6 +86,14 @@ To check the data:
 ```bash
 python3 scripts/validate.py
 ```
+
+Add `--previous-ref origin/main` to also flag deals whose status went backwards. To draft a changelog entry from your uncommitted data changes:
+
+```bash
+python3 scripts/diff_deals.py
+```
+
+The full weekly process, including the prompt for the Saturday research task, is in [docs/WEEKLY_UPDATE.md](docs/WEEKLY_UPDATE.md). The data format is in [docs/DATA_SCHEMA.md](docs/DATA_SCHEMA.md).
 
 ## Limitations
 

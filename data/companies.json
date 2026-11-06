@@ -1,0 +1,194 @@
+{
+  "companies": [
+    {
+      "id": "nvidia",
+      "name": "Nvidia",
+      "kind": "public",
+      "value_usd_b": 5200,
+      "value_as_of": "2026-10-30",
+      "value_note": "Market capitalisation, Oct 28-30, 2026.",
+      "parent_id": null,
+      "note": "Holds $99B of equity investments plus $25B more committed (July 2026 10-Q). Now an investor, guarantor and chip lessor."
+    },
+    {
+      "id": "amd",
+      "name": "AMD",
+      "kind": "public",
+      "value_usd_b": 930,
+      "value_as_of": "2026-10-30",
+      "value_note": "Market capitalisation, Oct 28-30, 2026.",
+      "parent_id": null,
+      "note": "Gave both OpenAI and Meta warrants for up to 160M shares tied to 6GW GPU deals."
+    },
+    {
+      "id": "intel",
+      "name": "Intel",
+      "kind": "public",
+      "value_usd_b": 348,
+      "value_as_of": "2026-10-30",
+      "value_note": "Market capitalisation, Oct 28-30, 2026. Fell 28.6% on Oct 30.",
+      "parent_id": null,
+      "note": "Nvidia owns about 4%."
+    },
+    {
+      "id": "broadcom",
+      "name": "Broadcom",
+      "kind": "public",
+      "value_usd_b": 1660,
+      "value_as_of": "2026-10-30",
+      "value_note": "Market capitalisation, Oct 28-30, 2026.",
+      "parent_id": null,
+      "note": "Builds OpenAI's custom chips and leases Google TPUs to Anthropic."
+    },
+    {
+      "id": "softbank",
+      "name": "SoftBank",
+      "kind": "public",
+      "value_usd_b": null,
+      "value_as_of": "TODO",
+      "value_note": "Not sized in the prototype.",
+      "parent_id": null,
+      "note": "Co-led OpenAI's $122B round; co-owner of Stargate."
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "kind": "ai_lab",
+      "value_usd_b": 852,
+      "value_as_of": "2026-03",
+      "value_note": "Last priced round (Mar 2026). A $1.25T round is in progress; its target was reportedly cut from $30B to about $20B.",
+      "parent_id": null,
+      "note": "Last priced at $852B. Microsoft holds about 27% after the recapitalization."
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "kind": "public",
+      "value_usd_b": 2650,
+      "value_as_of": "2026-10-30",
+      "value_note": "Market capitalisation, Oct 28-30, 2026.",
+      "parent_id": null,
+      "note": "Backs both labs and sells compute to both."
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "kind": "ai_lab",
+      "value_usd_b": 965,
+      "value_as_of": "2026-05",
+      "value_note": "Series H valuation (May 2026).",
+      "parent_id": null,
+      "note": "IPO filing (Oct 26, 2026) shows roughly $657B of compute commitments; per-counterparty figures are shown as separate deals."
+    },
+    {
+      "id": "spacex",
+      "name": "SpaceX",
+      "kind": "public",
+      "value_usd_b": 1960,
+      "value_as_of": "2026-10-30",
+      "value_note": "Market capitalisation, Oct 28-30, 2026. Listed June 2026.",
+      "parent_id": null,
+      "note": "Now includes xAI (merged Feb 2026) and Cursor (bought Aug 2026)."
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "kind": "ai_lab",
+      "value_usd_b": null,
+      "value_as_of": "2026-02",
+      "value_note": "Valued inside SpaceX since the Feb 2026 merger.",
+      "parent_id": "spacex",
+      "note": "AI lab merged into SpaceX in February 2026."
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "kind": "private",
+      "value_usd_b": null,
+      "value_as_of": "2026-08",
+      "value_note": "Valued inside SpaceX since the Aug 2026 acquisition.",
+      "parent_id": "spacex",
+      "note": "AI coding tool acquired by SpaceX in August 2026."
+    },
+    {
+      "id": "oracle",
+      "name": "Oracle",
+      "kind": "public",
+      "value_usd_b": 396,
+      "value_as_of": "2026-10-30",
+      "value_note": "Market capitalisation, Oct 28-30, 2026.",
+      "parent_id": null,
+      "note": "Debt-funded build-out; further capital raises capped at $20B through FY2030."
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft",
+      "kind": "public",
+      "value_usd_b": 3900,
+      "value_as_of": "2026-10-30",
+      "value_note": "Market capitalisation, Oct 28-30, 2026.",
+      "parent_id": null,
+      "note": "Holds about 27% of OpenAI; Azure exclusivity ended in April 2026."
+    },
+    {
+      "id": "alphabet",
+      "name": "Alphabet",
+      "kind": "public",
+      "value_usd_b": 3500,
+      "value_as_of": "2026-10-30",
+      "value_note": "Market capitalisation, Oct 28-30, 2026. Sized after a ~12.6% drop on Oct 29.",
+      "parent_id": null,
+      "note": "Google's parent: invests in Anthropic and sells it cloud capacity."
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "kind": "public",
+      "value_usd_b": 1580,
+      "value_as_of": "2026-10-30",
+      "value_note": "Market capitalisation, Oct 28-30, 2026.",
+      "parent_id": null,
+      "note": "Raising up to $95B; Nvidia, AMD and Broadcom offered to buy its shares."
+    },
+    {
+      "id": "coreweave",
+      "name": "CoreWeave",
+      "kind": "public",
+      "value_usd_b": 30,
+      "value_as_of": "2026-10-30",
+      "value_note": "Approximate market capitalisation, late Oct 2026.",
+      "parent_id": null,
+      "note": "Stock down 36% in October; five-year CDS near 1,145bp, the web's main stress point."
+    },
+    {
+      "id": "nebius",
+      "name": "Nebius",
+      "kind": "public",
+      "value_usd_b": 47,
+      "value_as_of": "2026-10-30",
+      "value_note": "Approximate market capitalisation, late Oct 2026.",
+      "parent_id": null,
+      "note": "Two customers (Microsoft, Meta) make up most of its backlog."
+    },
+    {
+      "id": "nscale",
+      "name": "Nscale",
+      "kind": "private",
+      "value_usd_b": 15,
+      "value_as_of": "TODO",
+      "value_note": "Approximate; last private valuation.",
+      "parent_id": null,
+      "note": "Filed for IPO Sept 2026; reportedly in talks for a second ~$45B Anthropic deal."
+    },
+    {
+      "id": "lambda",
+      "name": "Lambda",
+      "kind": "private",
+      "value_usd_b": null,
+      "value_as_of": "TODO",
+      "value_note": "Not sized in the prototype.",
+      "parent_id": null,
+      "note": "Private GPU cloud provider (neocloud)."
+    }
+  ]
+}

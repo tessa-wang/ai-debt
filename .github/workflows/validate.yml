@@ -1,0 +1,40 @@
+name: Validate data
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history, so we can compare with the previous data
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pick the version to compare against
+        id: prev
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "ref=origin/${{ github.base_ref }}" >> "$GITHUB_OUTPUT"
+          elif git cat-file -e "${{ github.event.before }}^{commit}" 2>/dev/null; then
+            echo "ref=${{ github.event.before }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Validate data files
+        run: |
+          if [ -n "${{ steps.prev.outputs.ref }}" ]; then
+            python3 scripts/validate.py --previous-ref "${{ steps.prev.outputs.ref }}"
+          else
+            python3 scripts/validate.py
+          fi
+
+      - name: Check the scripts still run
+        run: python3 scripts/diff_deals.py --old-dir data --new-dir data > /dev/null

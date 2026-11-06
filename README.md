@@ -1,131 +1,114 @@
-# AI Money Web
+# The AI Money Web
 
-**Who funds whom in AI.** An interactive map of the investments, chip
-purchases, cloud and compute contracts, and debt financing that link Nvidia,
-OpenAI, Anthropic, Microsoft, Amazon, Oracle, the neoclouds and others.
-It is researched every week and reviewed by a person before publishing.
+An interactive, weekly-updated map of the money flowing between the companies building AI.
 
-**Live site:** https://tessa-wang.github.io/ai-debt/
+🔗 Live site: https://tessa-wang.github.io/ai-debt/
 
 ![The map: companies as circles sized by value, deals as arrows coloured by category](docs/screenshot.png)
 
-## What it does
+---
 
-- **Interactive diagram.** Circles are sized by market value or latest
-  valuation, and the AI labs are drawn as hubs. Arrows follow the money:
-  colour and dash pattern show the category, width shows the amount, and
-  faded lines are reported-only or cancellable deals.
-- **Company panel.** Click a company, or press Tab and Enter, to see every
-  deal in and out, with amounts, status and sources.
-- **Tooltips.** Hover a line for its summary; click it to pin the tooltip
-  and open its sources.
-- **Timeline.** Scrub month by month, or press play, to watch the web grow.
-- **Filters** by deal category, a **table view** of every deal, and
-  **shareable links** (`#company=openai`, `#deal=<id>`).
-- **Changelog** of every weekly update, and an **About** page covering the
-  method and its limitations.
+## What this is
 
-Everything is rendered from the JSON files in [`data/`](data). Adding a
-company or a deal never needs a code change.
+AI companies are increasingly financing each other. Chipmakers invest in their customers, AI labs sign multi-hundred-billion-dollar cloud contracts, and data centers are funded with debt, guarantees and GPU leases. Many analysts call this *circular financing*.
 
-## How it's built
+This site tracks those relationships in one diagram and updates it every week as new deals are announced, closed, changed or cancelled.
 
-Plain HTML, CSS and vanilla JavaScript (ES modules), plus
-[D3 v7.9.0](https://d3js.org/) from a pinned CDN URL with a subresource
-integrity hash. There is no framework, build step or npm, so GitHub Pages
-serves the repository as it is.
+## Features
+
+- **Interactive network diagram.** Companies are sized by market value or latest private valuation. Arrows show the direction money or commitments flow.
+- **Four deal types.** Chips and hardware, equity investments, cloud and compute contracts, and debt, guarantees and leases. Each has its own colour and line style.
+- **Company panels.** Click any company to see every deal going in and out, with amounts, status and sources.
+- **Timeline slider.** Watch the web grow month by month.
+- **Weekly changelog.** See exactly what changed each week.
+- **Sources on every deal.** Each relationship links to the reporting or filing behind it.
+
+## How it works
 
 ```
-index.html            the map
-changelog.html        weekly changes
-about.html            method, data in plain English, limitations, credits
-assets/
-  style.css           "dark finance terminal" theme
-  js/
-    common.js         data loading, formatting, category/status vocab
-    layout.js         force layout, label placement, edge curves
-    graph.js          SVG drawing, highlighting, zoom
-    panel.js          company side panel
-    tooltip.js        hover / pinned deal tooltip
-    timeline.js       month slider and play button
-    table.js          table view of deals
-    main.js           page state and wiring for index.html
-    changelog.js      renders changelog.html
-    about.js          live counts and definitions for about.html
-data/
-  companies.json      companies (nodes)
-  deals.json          deals (arrows)
-  changelog.json      one entry per weekly update
-  meta.json           last-updated date, schema version
-  layout.json         pinned positions for the biggest companies
-scripts/
-  validate.py         schema and sanity checks (runs in CI)
-  diff_deals.py       drafts a changelog entry from two data versions
-  schema.py           shared constants for both scripts
-docs/
-  DATA_SCHEMA.md      field-by-field schema and conventions
-  WEEKLY_UPDATE.md    the scheduled-task prompt and the review checklist
-.github/workflows/
-  validate.yml        runs validate.py on every push and pull request
+Weekly research  →  Python validation  →  Human review  →  Published site
+(Claude, Saturdays)   (scripts/)          (pull request)    (GitHub Pages)
 ```
 
-Some design decisions:
+1. **Research.** Every Saturday, an AI research task reviews the week's news and SEC filings and drafts updates to the data files.
+2. **Validation.** Python scripts check the update for errors, such as unknown companies, missing sources or implausible amounts, and generate a changelog entry from the differences.
+3. **Review.** A person reviews the changes before they go live.
+4. **Publish.** Merging the update republishes the site automatically through GitHub Pages.
 
-- **A stable layout.** The force simulation runs to completion before
-  anything is drawn, with the biggest companies pinned by
-  `data/layout.json`. d3-force's random source has a fixed seed, so the same
-  data always gives the same picture and the map doesn't move about between
-  visits. Phones get their own portrait layout.
-- **No overlapping labels.** Labels are placed greedily: each tries
-  inside, below, right, left, above and the diagonals, and takes the first
-  spot that hits no circle and no earlier label.
-- **Accessibility.** Every category has a dash pattern as well as a colour,
-  and the colours were checked for colour-blind separation. Companies are
-  keyboard-focusable buttons, and Escape closes things. The table is an
-  alternative to the diagram for screen readers.
-  `prefers-reduced-motion` turns off transitions and slows playback, and
-  high-contrast mode is supported.
-- **Shared code for the data scripts.** `validate.py` and `diff_deals.py`
-  get their rules from `schema.py`, so the scripts and
-  [DATA_SCHEMA.md](docs/DATA_SCHEMA.md) can't drift apart.
+## Tech stack
 
-## Running it locally
+| Layer | Tools |
+|---|---|
+| Data pipeline | Python 3 (standard library only) |
+| Visualization | JavaScript, D3.js |
+| Data | JSON files in `data/` |
+| Hosting and CI | GitHub Pages, GitHub Actions |
 
-Browsers block `fetch()` on `file://` pages, so serve the folder:
+## Project structure
+
+```
+├── index.html            Main interactive diagram
+├── changelog.html        Weekly changes
+├── about.html            Methodology and limitations
+├── assets/
+│   ├── style.css         Dark "finance terminal" theme
+│   └── js/               ES modules: layout, graph, panel, timeline, …
+├── data/
+│   ├── companies.json    Companies and valuations
+│   ├── deals.json        Every deal, with status and sources
+│   ├── changelog.json    Weekly change history
+│   ├── meta.json         "Last updated" date shown in the header
+│   └── layout.json       Pinned positions for the biggest companies
+├── scripts/
+│   ├── validate.py       Checks data before publishing
+│   ├── diff_deals.py     Drafts the weekly changelog
+│   └── schema.py         Rules shared by both scripts
+├── docs/
+│   ├── DATA_SCHEMA.md    Field-by-field data format
+│   └── WEEKLY_UPDATE.md  Scheduled-task prompt and review checklist
+└── .github/workflows/    Runs validate.py on every push and pull request
+```
+
+There is no build step: plain HTML, CSS and JavaScript, with D3 v7.9.0 loaded from a pinned CDN URL. The map is laid out by a seeded force simulation around pinned anchors, so it looks the same on every visit.
+
+## Run it locally
 
 ```bash
+git clone https://github.com/tessa-wang/ai-debt.git
+cd ai-debt
 python3 -m http.server 8000
 ```
 
-Then open http://localhost:8000/.
+Then open http://localhost:8000. A local server is needed because browsers block loading the data files directly from your disk.
 
-## Data workflow
-
-Each week a Claude scheduled task researches news and SEC filings and drafts
-updated data files. A person reviews them and commits. The full prompt and
-the review steps are in [docs/WEEKLY_UPDATE.md](docs/WEEKLY_UPDATE.md).
-
-Validate the data (Python 3 standard library only):
+To check the data:
 
 ```bash
 python3 scripts/validate.py
 ```
 
-It exits non-zero on errors. Add `--strict` to also fail on warnings, and
-`--no-todo` to fail on remaining TODO placeholders. Add
-`--previous-ref origin/main` to also flag status regressions and removed
-deals.
-
-Draft a changelog entry from your uncommitted changes:
+Add `--previous-ref origin/main` to also flag deals whose status went backwards. To draft a changelog entry from your uncommitted data changes:
 
 ```bash
 python3 scripts/diff_deals.py
 ```
 
-Add `--apply` to insert the draft into `data/changelog.json`.
+The full weekly process, including the prompt for the Saturday research task, is in [docs/WEEKLY_UPDATE.md](docs/WEEKLY_UPDATE.md). The data format is in [docs/DATA_SCHEMA.md](docs/DATA_SCHEMA.md).
+
+## Limitations
+
+- **Reported vs. confirmed.** Some deals are based on news reports rather than official filings. These are marked "reported" and drawn faded.
+- **Values change daily.** Market values are snapshots as of the date shown on the site.
+- **Not financial advice.** This is an educational project and should not be used to make investment decisions.
+
+See the [About page](https://tessa-wang.github.io/ai-debt/about.html) for the full methodology.
 
 ## Credits
 
-Built by [YOUR NAME] and [TESSA'S NAME]. Research assisted by Claude.
-Deal summaries are written in our own words; reporting belongs to the
-outlets cited in each deal's sources. Not investment advice.
+Built by **[Tessa Wang](https://github.com/tessa-wang)** and **[YOUR NAME](https://github.com/YOUR-USERNAME)**.
+
+Inspired by Bloomberg's 2025 graphic of circular AI financing.
+
+## License
+
+[MIT](LICENSE)
